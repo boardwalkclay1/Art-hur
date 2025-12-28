@@ -1,0 +1,240 @@
+/* -------------------------------------------------------
+   RESET + BASE
+------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: system-ui, sans-serif;
+  background: #05060a;
+  color: #e8ecf3;
+  min-height: 100vh;
+}
+
+/* Page wrapper */
+.page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* -------------------------------------------------------
+   TYPOGRAPHY
+------------------------------------------------------- */
+.page-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+}
+
+.page-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.75;
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.hero-highlight {
+  display: block;
+  background: linear-gradient(90deg, #7a5cff, #4da6ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-body {
+  font-size: 1.2rem;
+  opacity: 0.85;
+  max-width: 520px;
+  margin-bottom: 2rem;
+}
+
+/* -------------------------------------------------------
+   HERO LAYOUT
+------------------------------------------------------- */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.hero-orbit {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 2px dashed rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: orbit 18s linear infinite;
+}
+
+.hero-orbit-inner {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+@keyframes orbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* -------------------------------------------------------
+   BUTTONS
+------------------------------------------------------- */
+.btn-primary {
+  background: linear-gradient(135deg, #4da6ff, #7a5cff);
+  color: white;
+  padding: 0.75rem 1.4rem;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(77,166,255,0.4);
+}
+
+.btn-ghost {
+  padding: 0.75rem 1.4rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #e8ecf3;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s ease;
+}
+
+.btn-ghost:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* -------------------------------------------------------
+   CARDS
+------------------------------------------------------- */
+.card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: 0.2s ease;
+}
+
+.card:hover {
+  border-color: rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.06);
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.card-label {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-bottom: 0.3rem;
+}
+
+.card-body {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+/* -------------------------------------------------------
+   GRID SYSTEM
+------------------------------------------------------- */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* -------------------------------------------------------
+   FORMS
+------------------------------------------------------- */
+.form-row {
+  margin-bottom: 1.2rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.75;
+  margin-bottom: 0.4rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.05);
+  color: white;
+  font-size: 1rem;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #4da6ff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(77,166,255,0.4);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* -------------------------------------------------------
+   PILLS (Skills)
+------------------------------------------------------- */
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.pill {
+  padding: 0.4rem 0.8rem;
+  background: rgba(255,255,255,0.08);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(255,255,255,0.15);
+}
